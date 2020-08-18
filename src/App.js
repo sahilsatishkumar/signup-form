@@ -48,7 +48,7 @@ function App() {
 		const validateEmail = event.target.value || email;
 		if (validateEmail)
 			checkIfEmailExists(validateEmail)
-				.then(() => console.info("New email signing up"))
+				.then(() => setEmailError())
 				.catch((err) => setEmailError(err));
 		else setEmailError(false);
 	}
